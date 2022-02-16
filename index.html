@@ -5,10 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INP BANK</title>
+    <!-- bootstrap cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- css stylesheet link -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Hello world!!!!</h1>
+    <!----------- header starting ------------->
+   <header>
+       <h1 class="text-center p-5">INP BANK</h1>
+   </header>
+   <!------------ main starting --------------->
+   <main>
+    <section class="container m-4 d-flex">
+        <div class="left-side ">
+        <img class="" src="images/bank-img.png" alt="">
+        </div>
+        <div class="right-side bg-light p-5">
+            <div class="income"><div class="title"><h4>Income</h4></div>
+                <p class="d-inline">Income:</p><input  class="m-3"type="text">
+            </div>
+            <div>
+                <div class="Expenses"><h4>Expenses</h4></div>
+                <div class="d-inline">
+                <p class="d-inline">Food:</p><input class="m-3" type="text">
+                <br>
+                <p class="d-inline">Rent:</p><input class="m-3" type="text">
+                <br>
+                <p class="d-inline">Clothes:</p><input class="mx-3" type="text">
+                </div>
+            </div>
+            <button class="btn btn-primary px-5 py-2 d-block my-4">Calculate</button>
+            <h4>Total Expenses: <span id="total-expenses">0000</span> </h4>
+            <h4>Balance: <span id="banance">0000</span> </h4>
+            <div class="my-3">
+                <p class="d-inline">Save:</p>
+                <input class="my-3 ms-3 w-25" type="text">
+                <p class="d-inline mx-2">%</p>
+                <button class="btn btn-primary px-5 py-2 ">Save</button>
+            </div>
+            <h4>Saving Amount: <span>0000</span> </h4>
+            <h4>Remaining Balance: <span>0000</span> </h4>
+
+        </div>
+    </section>
+   </main>
+
+
+
+
+
+
+    <!-- bootstrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <!-- Javascript connection link -->
     <script src="js/app.js"></script>
 </body>
