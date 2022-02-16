@@ -1,5 +1,15 @@
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+.background{
+    background-color: rgba(189, 189, 189, 0.342);
+    border: none;
+    font-size: 25px;
+    font-weight: bold;
+    height: 40px;
+    width: 60%;
+    border-radius: 4px;
 }

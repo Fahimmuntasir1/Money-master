@@ -13,7 +13,7 @@
 <body>
     <!----------- header starting ------------->
    <header>
-       <h1 class="text-center p-5">INP BANK</h1>
+       <h1 class="text-center p-5 fw-bold">INTERNATIONAL NON-PROFIT BANK</h1>
    </header>
    <!------------ main starting --------------->
    <main>
@@ -22,30 +22,30 @@
         <img class="" src="images/bank-img.png" alt="">
         </div>
         <div class="right-side bg-light p-5">
-            <div class="income"><div class="title"><h4>Income</h4></div>
-                <p class="d-inline">Income:</p><input  class="m-3"type="text">
+            <div class="income"><div class="title"><h4 class="fw-bold">Income</h4></div>
+                <p class="d-inline fw-bold">Income:</p><input id="my-income"  class="m-3 background"type="text" required>
             </div>
             <div>
-                <div class="Expenses"><h4>Expenses</h4></div>
+                <div class="Expenses"><h4 class="fw-bold">Expenses</h4></div>
                 <div class="d-inline">
-                <p class="d-inline">Food:</p><input class="m-3" type="text">
+                <p class="d-inline fw-bold">Food:</p><input id="food" class="m-3 background" type="text" required>
                 <br>
-                <p class="d-inline">Rent:</p><input class="m-3" type="text">
+                <p class="d-inline fw-bold">Rent:</p><input id="rent" class="m-3 background" type="text" required>
                 <br>
-                <p class="d-inline">Clothes:</p><input class="mx-3" type="text">
+                <p class="d-inline fw-bold">Clothes:</p><input id="clothes" class="mx-3 mt-3 background" type="text" required>
                 </div>
             </div>
-            <button class="btn btn-primary px-5 py-2 d-block my-4">Calculate</button>
-            <h4>Total Expenses: <span id="total-expenses">0000</span> </h4>
-            <h4>Balance: <span id="banance">0000</span> </h4>
+            <button class="btn btn-primary px-5 py-2 d-block my-4" id="calculate-btn">Calculate</button>
+            <h4 class="fw-bold">Total Expenses: <span id="total-expenses">0</span> </h4>
+            <h4 class="fw-bold">Balance: <span id="balance">0</span> </h4>
             <div class="my-3">
-                <p class="d-inline">Save:</p>
-                <input class="my-3 ms-3 w-25" type="text">
+                <p class="d-inline fw-bold">Save:</p>
+                <input class="py-2 ms-3 mt-2 w-25 background" type="text" required>
                 <p class="d-inline mx-2">%</p>
-                <button class="btn btn-primary px-5 py-2 ">Save</button>
+                <button class="btn btn-primary px-5 py-2 mb-2">Save</button>
             </div>
-            <h4>Saving Amount: <span>0000</span> </h4>
-            <h4>Remaining Balance: <span>0000</span> </h4>
+            <h4 class="fw-bold">Saving Amount: <span>0000</span> </h4>
+            <h4 class="fw-bold">Remaining Balance: <span>0000</span> </h4>
 
         </div>
     </section>
