@@ -1,3 +1,10 @@
+// function errorMassage1(totalExpenses){
+//   if (totalExpenses>balance()) {
+//     const Error=document.getElementById('incomevs-cost');
+//     const errorShow=Error.style.display = "block";
+//     return errorShow
+//   }
+// }
 // calculate button
 document.getElementById("calculate-btn").addEventListener("click", function () {
   const totalExpenses = expenses("food", "rent", "clothes");
@@ -5,11 +12,17 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   errorMassage("food", "food-error");
   errorMassage("rent", "rent-error");
   errorMassage("clothes", "clothes-error");
-  errorMassage("savings", "savings-error");
+  // errorMassage1(totalExpenses)
+  if (totalExpenses>balance()) {
+    const Error=document.getElementById('incomevs-cost');
+    const errorShow=Error.style.display = "block";
+    return errorShow;
+  }
   const displayExpenses = document.getElementById("total-expenses");
   displayExpenses.innerText = totalExpenses;
   const displayBalance = document.getElementById("balance");
   displayBalance.innerText = balance();
+  
 });
 // expenses calculation
 function expenses(para1, para2, para3) {
@@ -33,12 +46,15 @@ function errorMassage(errorId, msgId) {
   const errorCatch = document.getElementById(errorId);
   if (errorCatch.value == " " || isNaN(errorCatch.value) || errorCatch.value <=0) {
     messageId.style.display = "block";
+    return messageId
     // console.log(errorCatch.value);
   }
+  }
   // messageId.style.display = "block";
-}
+  
 // savings button
 document.getElementById("savings").addEventListener("click", function () {
+  errorMassage("savings", "savings-error");
   const savingInput = document.getElementById("input-savings");
   const savingAmount = document.getElementById("saving-amount");
   const remainingBalance = document.getElementById("remaining-balance");
