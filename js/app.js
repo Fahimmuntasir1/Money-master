@@ -6,8 +6,9 @@ document.getElementById("calculate-btn").addEventListener("click", function () {
   errorMassage("rent", "rent-error");
   errorMassage("clothes", "clothes-error");
   // errorMassage1(totalExpenses)
-  if (totalExpenses>balance()) {
-    const Error=document.getElementById('incomevs-cost');
+  const income = document.getElementById("my-income").value;
+  if (totalExpenses>income) {
+    const Error=document.getElementById('income-vs-cost');
     const errorShow=Error.style.display = "block";
     return errorShow;
   }
@@ -39,7 +40,7 @@ function errorMassage(errorId, msgId) {
   const errorCatch = document.getElementById(errorId);
   if (errorCatch.value == " " || isNaN(errorCatch.value) || errorCatch.value <=0) {
     messageId.style.display = "block";
-    return messageId
+    return messageId;
     // console.log(errorCatch.value);
   }
   }
@@ -47,11 +48,11 @@ function errorMassage(errorId, msgId) {
   
 // savings button
 document.getElementById("savings").addEventListener("click", function () {
-  errorMassage("savings", "savings-error");
+  errorMassage("input-savings", "savings-error");
+  const income = document.getElementById("my-income").value;
   const savingInput = document.getElementById("input-savings");
   const savingAmount = document.getElementById("saving-amount");
   const remainingBalance = document.getElementById("remaining-balance");
-  const mySaving = (savingAmount.innerText =
-    (balance() * savingInput.value) / 100);
+  const mySaving = (savingAmount.innerText = (income * savingInput.value) / 100);
   remainingBalance.innerText = balance() - mySaving;
 });
