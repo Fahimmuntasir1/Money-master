@@ -1,11 +1,4 @@
-// function errorMassage1(totalExpenses){
-//   if (totalExpenses>balance()) {
-//     const Error=document.getElementById('incomevs-cost');
-//     const errorShow=Error.style.display = "block";
-//     return errorShow
-//   }
-// }
-// calculate button
+
 document.getElementById("calculate-btn").addEventListener("click", function () {
   const totalExpenses = expenses("food", "rent", "clothes");
   errorMassage('my-income', 'income-error')
