@@ -54,5 +54,8 @@ document.getElementById("savings").addEventListener("click", function () {
   const savingAmount = document.getElementById("saving-amount");
   const remainingBalance = document.getElementById("remaining-balance");
   const mySaving = (savingAmount.innerText = (income * savingInput.value) / 100);
+  if (mySaving>balance()) {
+    alert('You have not sufficient balance for saving money in your account')
+  }
   remainingBalance.innerText = balance() - mySaving;
 });
